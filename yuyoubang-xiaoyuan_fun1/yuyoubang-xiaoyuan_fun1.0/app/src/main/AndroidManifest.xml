@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yuyoubang">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+
+    <!--环信-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 友盟统计权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 友盟分享 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <application
+        android:name="com.yuyoubang.app.YuYouBangApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/ZhikeAppTheme">
+
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="5bbcddd7fd046259ab3c669993fe63aa" />
+
+        <!--声明定位service-->
+        <service android:name="com.amap.api.location.APSService"></service>
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="yybme#yuyoubang" />
+        <!-- 声明SDK所需的service SDK核心功能-->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/AppSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 友盟分享 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57874d9fe0f55a71d4000176"></meta-data>
+
+        <!-- 微博 -->
+        <activity
+            android:name=".activity.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"></activity>
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false"></service>
+
+        <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+        <!-- 腾讯 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105540042" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TestActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.LoginAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.RigisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.FindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.SetNewPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.SetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.LoginInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.home.InfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.picker.ClipImageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.home.JoinActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.home.ApplyAndLikeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.home.ChooseCityActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.home.SiftActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.find.FindInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.push.PushStateActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.push.BaseCaseActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.push.PushActActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.push.SetActInfoActiviy"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.push.SetDateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.push.SetLocationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.push.SystemTripListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.find.ChooseContentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".fragment.message.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.AuthenticationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ClipImaviewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".widget.photo.PhotoPickerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.mine.business.BusinessCenterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ScanImgsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.find.MoreLikeUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.find.OtherHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.CompanyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.mine.business.OpenBusinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.OpenBusinessTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.ClearMoneyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.ActionMangerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.FixPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.SetPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.SetPhoneTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.EditorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.MineSignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.CareUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.BlackUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.MineDoTanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.UserInfoStateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.MineOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.find.MoreRecommendUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.MineCommendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.CommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.OrderTypeStateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.action.ActionDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.push.SignLocationActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.mine.AddTagsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.order.OrderPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.message.chatrow.EaseShowBigImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.msg.SysMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.msg.OrderMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.msg.VisitMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.msg.TeamsMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.msg.MineTeamsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.msg.ContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.msg.TeamsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.message.photoview.EaseBaiduMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.SearchResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.msg.LocationAmapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.CommentDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.home.SiftResultActiivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.order.EditorChooseCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.YuYouBangRuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.message.chatrow.EaseShowVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.push.NewLocalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.BusinessSerachActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.BusSearchResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.ThemeSerachActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.business.ThemeSearchResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.find.ChooseResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.find.FindStatusLikeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PostTeamsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.MineStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.find.OtherInfoActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

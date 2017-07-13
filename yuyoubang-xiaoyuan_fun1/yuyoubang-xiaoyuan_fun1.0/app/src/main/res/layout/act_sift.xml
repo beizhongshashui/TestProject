@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="15dip"
+                        android:layout_marginLeft="20dip"
+                        android:background="@color/color_ff9600"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:text="出行时间"
+                        android:textColor="@color/color_000000" />
+
+
+                </LinearLayout>
+
+
+
+
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/go_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal"
+                    app:auto_select_effect="true"
+                    app:max_select="1"></com.zhy.view.flowlayout.TagFlowLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="15dip"
+                        android:layout_marginLeft="20dip"
+                        android:background="#5dc8f9"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:text="行程天数"
+                        android:textColor="@color/color_000000" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/go_days"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal"
+                    app:auto_select_effect="true"
+                    app:max_select="1"></com.zhy.view.flowlayout.TagFlowLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="15dip"
+                        android:layout_marginLeft="20dip"
+                        android:background="@color/color_f2b32a"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:text="价格区间"
+                        android:textColor="@color/color_000000" />
+
+
+                </LinearLayout>
+
+
+                <com.yuyoubang.view.ATDragView
+                    android:id="@+id/at_dragView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/reset"
+                    android:layout_width="120dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/yellow_circle"
+                    android:gravity="center"
+                    android:text="重置" />
+
+                <TextView
+                    android:id="@+id/sure"
+                    android:layout_width="120dip"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="10dip"
+                    android:background="@color/color_ff9600"
+                    android:gravity="center"
+                    android:textColor="@color/color_ffffff"
+                    android:text="确认" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

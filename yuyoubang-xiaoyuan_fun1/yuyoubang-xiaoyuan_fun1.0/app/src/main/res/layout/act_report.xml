@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feed_back_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F7F7"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/tv_feed_back_content"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="@dimen/dim10"
+            android:background="@color/color_ffffff"
+            android:gravity="left"
+            android:hint="请输入举报类型和原因（虚假信息、色情、广告推销、诈骗、信息骚扰、冒充他人、其它）"
+            android:lineSpacingExtra="@dimen/txt11"
+            android:paddingLeft="@dimen/dim12"
+            android:paddingRight="@dimen/dim12"
+            android:paddingTop="@dimen/dim15"
+            android:scrollbarFadeDuration="2000"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/txt16" />
+
+        <EditText
+            android:id="@+id/tv_your_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim2"
+            android:background="@color/color_ffffff"
+            android:digits="1234567890"
+            android:hint="手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingBottom="@dimen/dim12"
+            android:paddingLeft="@dimen/dim12"
+            android:paddingTop="@dimen/dim12"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/txt16" />
+
+        <TextView
+            android:id="@+id/tv_click_commit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/go_time_pressed"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt18" />
+
+    </LinearLayout>
+
+</ScrollView>

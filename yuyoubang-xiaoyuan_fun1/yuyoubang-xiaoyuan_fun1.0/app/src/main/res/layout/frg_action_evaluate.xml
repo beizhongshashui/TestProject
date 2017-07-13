@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_f7f7f7"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="100dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/grey_reage"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/comment_avg_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="4.7"
+                android:textColor="@color/color_ff9600" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="20dip"
+                android:background="@color/color_cccccc" />
+
+
+            <TextView
+                android:id="@+id/comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="54人评论" />
+
+            <RatingBar
+                android:id="@+id/comment_rb_count"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_ff9600" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5星" />
+
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/pb_five"
+                    android:layout_width="0dip"
+                    android:layout_height="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    app:rcBackgroundColor="@color/color_898989"
+                    app:rcMax="100"
+                    app:rcProgressColor="@color/color_ff9600"
+                    app:rcRadius="0dip" />
+
+
+                <TextView
+                    android:id="@+id/pb_five_percentage"
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="40%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4星" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/pb_four"
+                    android:layout_width="0dip"
+                    android:layout_height="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    app:rcBackgroundColor="@color/color_898989"
+                    app:rcMax="100"
+                    app:rcProgressColor="@color/color_ff9600"
+                    app:rcRadius="0dip" />
+
+                <TextView
+                    android:id="@+id/pb_four_percentage"
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="20%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3星" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/pb_three"
+                    android:layout_width="0dip"
+                    android:layout_height="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    app:rcBackgroundColor="@color/color_898989"
+                    app:rcMax="100"
+                    app:rcProgressColor="@color/color_ff9600"
+                    app:rcRadius="0dip" />
+
+                <TextView
+                    android:id="@+id/pb_three_percentage"
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="10%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2星" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/pb_two"
+                    android:layout_width="0dip"
+                    android:layout_height="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    app:rcBackgroundColor="@color/color_898989"
+                    app:rcMax="100"
+                    app:rcProgressColor="@color/color_ff9600"
+                    app:rcRadius="0dip" />
+
+                <TextView
+                    android:id="@+id/pb_two_percentage"
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="20%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1星" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/pb_one"
+                    android:layout_width="0dip"
+                    android:layout_height="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    app:rcBackgroundColor="@color/color_898989"
+                    app:rcMax="100"
+                    app:rcProgressColor="@color/color_ff9600"
+                    app:rcRadius="0dip" />
+
+                <TextView
+                    android:id="@+id/pb_one_percentage"
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="10%" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/color_ff9600"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/color_ff9600"
+            app:tabTextColor="@color/color_a8a8a8"></android.support.design.widget.TabLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

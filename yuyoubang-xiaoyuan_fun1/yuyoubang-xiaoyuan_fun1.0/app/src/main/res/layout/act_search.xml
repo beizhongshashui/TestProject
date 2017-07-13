@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/color_ff9600"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center|left">
+
+        <ImageView
+            android:id="@+id/left_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/white_back_icon" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_weight="1"
+            android:background="@drawable/search_white_circle"
+            android:drawableLeft="@mipmap/search"
+            android:drawablePadding="10dp"
+            android:gravity="center|left"
+            android:hint="搜索活动线路/用户昵称"
+            android:paddingBottom="5dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="5dip"
+            android:textColorHighlight="@color/color_b8b8b8"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/sift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:padding="10dp"
+            android:text="搜索"
+            android:textColor="@color/color_ffffff" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:text="热门城市"
+            android:textColor="@color/color_000000" />
+
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/gv_hot_city"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal"
+            app:auto_select_effect="true"
+            app:max_select="1"></com.zhy.view.flowlayout.TagFlowLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1"
+            android:text="搜索历史"
+            android:textColor="@color/color_000000" />
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="清除"
+            android:textColor="@color/color_999999" />
+
+    </LinearLayout>
+
+    <com.yuyoubang.widget.recycleview.RecyclerListView
+        android:id="@+id/more_follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.yuyoubang.widget.recycleview.RecyclerListView>
+</LinearLayout>

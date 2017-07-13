@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请开通您的邦主身份"/>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="40dip"
+        android:layout_marginRight="40dp"
+        android:gravity="left|center">
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/personal"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_505050"
+            android:text="  个人（达人/导游/领队）"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="40dip"
+        android:layout_marginRight="40dp"
+        android:gravity="left|center">
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/company"/>
+
+
+        <TextView
+            android:id="@+id/apply_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_505050"
+            android:text="  企业用户"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

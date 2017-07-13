@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:recyclelistview="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/search_city"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_margin="10dip"
+            android:background="@drawable/hot_city_search_grey_circle"
+            android:drawableLeft="@mipmap/search"
+            android:hint="搜索"
+            android:paddingBottom="5dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="5dip"
+            android:textColor="@color/color_ff9600"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <com.yuyoubang.widget.recycleview.RecyclerListView
+        android:visibility="gone"
+        android:id="@+id/more_follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        recyclelistview:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+    </com.yuyoubang.widget.recycleview.RecyclerListView>
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/lv_all_city"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:divider="@null" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.yuyoubang.activity.sort.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="30.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

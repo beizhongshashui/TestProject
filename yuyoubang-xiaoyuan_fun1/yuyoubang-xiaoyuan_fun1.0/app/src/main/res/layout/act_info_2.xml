@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.yuyoubang.view.StickyScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/test"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/trip_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dip"
+                        android:background="@color/color_000000"
+                        android:scaleType="centerCrop" />
+
+
+                    <com.yuyoubang.view.CircleImageView
+                        android:id="@+id/trip_pic"
+                        android:layout_width="69dip"
+                        android:layout_height="69dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="220dip"
+                        app:civ_border_color="@color/color_ffffff"
+                        app:civ_border_width="2dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/trip_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginBottom="50dip"
+                        android:textColor="@color/color_ffffff"
+                        android:text="ssss"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dip"
+                        android:layout_marginTop="260dip"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/trip_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="大先生"
+                            android:textColor="@color/color_000000" />
+
+
+                        <LinearLayout
+                            android:id="@+id/bg_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:background="@drawable/bg_color_ff9600"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="1dp">
+
+                            <ImageView
+                                android:id="@+id/iv_sex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/sex_men" />
+
+                            <TextView
+                                android:id="@+id/trip_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:text="25"
+                                android:textColor="@color/color_ffffff"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/trip_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:background="@drawable/bg_color_ff9600"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="1dp"
+                            android:gravity="center"
+                            android:text="北京"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/trip_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dip"
+                    android:layout_marginTop="10dip"
+                    android:text="香港直飞5日游"
+                    android:textColor="@color/color_000000"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/trip_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥"
+                        android:textColor="@color/color_fc4004" />
+
+                    <TextView
+                        android:id="@+id/trip_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="203"
+                        android:textColor="@color/color_fc4004"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/color_f0f0f0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/act_info_date"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活动日期:"
+                        android:layout_marginLeft="10dip"
+                        android:textColor="@color/color_505050" />
+
+                    <TextView
+                        android:id="@+id/trip_action_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/act_info_humen"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已报名:"
+                        android:layout_marginLeft="10dip"
+                        android:textColor="@color/color_505050" />
+
+                    <TextView
+                        android:id="@+id/trip_enter_sure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:text="3"
+                        android:textColor="@color/color_ff9600" />
+
+
+                    <TextView
+                        android:id="@+id/trip_enter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/20人" />
+
+                    <TextView
+                        android:id="@+id/trip_enter_tyip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   其中男：2人；女：1人。" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/act_info_location"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="集合地点:"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dip"
+                        android:textColor="@color/color_505050" />
+
+                    <TextView
+                        android:id="@+id/info_meet_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:text="" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dip"
+                    android:background="@color/color_f0f0f0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/trip_enter_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:gravity="center"
+                        android:text="报名(23)"
+                        android:drawableLeft="@mipmap/act_info_apply_count"
+                        android:drawablePadding="10dip"
+                        android:textColor="@color/color_505050" />
+
+                    <TextView
+                        android:id="@+id/trip_like_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:text="喜欢(38)"
+                        android:gravity="center"
+                        android:drawableLeft="@mipmap/act_info_like_count"
+                        android:drawablePadding="10dip"
+                        android:textColor="@color/color_505050" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/trip_enter_term"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="进入讨论组"
+                        android:textColor="@color/color_ff9600" />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.yuyoubang.widget.recycleview.RecyclerListView
+                    android:id="@+id/trip_like_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/trip_like_more"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="55dip"
+                    android:layout_marginTop="10dip"></com.yuyoubang.widget.recycleview.RecyclerListView>
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/trip_like_more"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@mipmap/act_info_like_more" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@color/color_f0f0f0" />
+
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_centerInParent="true"
+                    android:background="@color/color_ffffff"
+                    android:tag="sticky"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/color_ff9600"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/color_ff9600"
+                    app:tabTextColor="@color/color_505050"></android.support.design.widget.TabLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="480dip" />
+
+            </LinearLayout>
+        </com.yuyoubang.view.StickyScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dip"
+            android:background="@color/color_f0f0f0" />
+
+        <LinearLayout
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="bottom"
+            android:background="@color/color_ffffff"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/trip_islike"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_marginTop="5dip"
+                    android:src="@mipmap/act_info_like" />
+
+                <TextView
+                    android:id="@+id/trip_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:text="喜欢" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:background="@drawable/sel_listview_eeeeee_eaeaea"
+                android:id="@+id/send_msg"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@mipmap/ic_comment" />
+
+                <TextView
+                    android:id="@+id/trip_ask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:text="咨询" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/trip_sign_up"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/color_ff9600"
+                android:gravity="center"
+                android:text="立即报名"
+                android:textColor="@color/color_ffffff" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="top"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/info_left_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@mipmap/white_back_icon" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="活动详情"
+                android:textColor="@color/color_ffffff" />
+
+            <ImageView
+                android:id="@+id/share_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dip"
+                android:background="@mipmap/share" />
+
+            <TextView
+                android:id="@+id/report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="50dip"
+                android:gravity="center"
+                android:text="举报"
+                android:textColor="@color/color_ffffff" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

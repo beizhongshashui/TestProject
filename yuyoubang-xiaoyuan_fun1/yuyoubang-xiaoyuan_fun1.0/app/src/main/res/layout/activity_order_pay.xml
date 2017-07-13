@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_choose"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/name_layout"
+        android:layout_marginLeft="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/choose_pay"
+        android:textColor="@color/color_8e8e93"
+        android:textSize="@dimen/txt13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_choose"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/weixin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dim13"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/wx_pay"
+                android:textColor="@color/color_585858"
+                android:textSize="@dimen/txt15" />
+
+            <CheckBox
+                android:id="@+id/wx_way_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim0.5"
+            android:layout_marginLeft="30dp"
+            android:background="@color/color_dddddf" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/icon_zhifubao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dim13"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/zfb_pay"
+                android:textColor="@color/color_585858"
+                android:textSize="@dimen/txt15" />
+
+            <CheckBox
+                android:id="@+id/zfb_way_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="107dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/question_pay"
+            android:textColor="@color/color_8e8e93"
+            android:textSize="@dimen/txt12" />
+
+        <TextView
+            android:id="@+id/tv_call_num"
+            android:layout_width="109dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim12"
+            android:background="@drawable/shape_color_cccccc_f1f1f2"
+            android:gravity="center"
+            android:text="0755-84552622"
+            android:textColor="@color/color_8e8e93"
+            android:textSize="@dimen/txt12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="@string/total_pay"
+            android:textColor="@color/color_454545"
+            android:textSize="@dimen/txt18" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="19"
+            android:textColor="@color/color_ff9700"
+            android:textSize="@dimen/txt20" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_ff9700"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/txt18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@color/color_ff9700"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/produce_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="巴厘岛7日游"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/txt17" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:text="19"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/txt30" />
+    </LinearLayout>
+</RelativeLayout>

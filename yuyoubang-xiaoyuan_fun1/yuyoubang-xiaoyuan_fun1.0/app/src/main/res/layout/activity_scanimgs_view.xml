@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_000000">
+
+    <LinearLayout
+        android:id="@+id/imgsArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#e6e6e6"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="21dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_marginLeft="@dimen/dim10"
+            android:background="@mipmap/white_back_icon"/>
+
+        <TextView
+            android:id="@+id/img_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dim10"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/txt24"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

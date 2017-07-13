@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:src="@mipmap/bus_icon"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dip"
+        android:orientation="horizontal">
+
+
+        <CheckBox
+            android:id="@+id/cb_argee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  我已阅读并同意"/>
+
+        <TextView
+            android:id="@+id/yuyoubang_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ff9600"
+            android:text="遇游邦邦主管理规则"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_open_biz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开通邦主功能>>>"
+        android:textColor="@color/white"
+        android:padding="15dip"
+        android:gravity="center"
+        android:background="@color/color_ff9600"/>
+
+
+</LinearLayout>

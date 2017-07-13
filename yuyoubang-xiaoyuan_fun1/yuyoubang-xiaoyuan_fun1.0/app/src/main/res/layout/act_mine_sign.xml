@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/tv_feed_back_content"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="@dimen/dim10"
+        android:background="@color/color_ffffff"
+        android:gravity="left"
+        android:hint="请输入18个字以内的个人签名"
+        android:lineSpacingExtra="@dimen/txt11"
+        android:maxLength="18"
+        android:paddingLeft="@dimen/dim12"
+        android:paddingRight="@dimen/dim12"
+        android:paddingTop="@dimen/dim15"
+        android:scrollbarFadeDuration="2000"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/txt16" />
+</LinearLayout>

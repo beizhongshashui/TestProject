@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dip"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/hot_city_selected"
+    android:paddingBottom="8dip"
+    android:paddingLeft="13dip"
+    android:paddingRight="13dip"
+    android:paddingTop="8dip"
+    android:minWidth="70dip"
+    android:gravity="center"
+    android:text=""
+    android:textColor="@drawable/label_text_selected">
+
+</TextView>

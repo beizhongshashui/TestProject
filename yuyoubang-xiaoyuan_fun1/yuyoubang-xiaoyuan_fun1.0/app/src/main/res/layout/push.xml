@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans_parent">
+
+
+
+    <FrameLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="340dip"
+        android:background="@mipmap/main_add_popup_bg"
+        android:layout_marginRight="5dip"
+        android:layout_marginLeft="5dip"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+
+            <LinearLayout
+                android:id="@+id/push_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:background="@mipmap/main_add_popup_state"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:text="发表动态"/>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/push_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="40dip"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:background="@mipmap/main_add_popup_act"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:text="发布新活动"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginBottom="10dip"
+            android:layout_gravity="bottom|center"
+            android:background="@mipmap/main_add_popup_close"/>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

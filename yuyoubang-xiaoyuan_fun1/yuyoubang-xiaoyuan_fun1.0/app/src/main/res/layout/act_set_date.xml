@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/color_f0f0f0" />
+    <RelativeLayout
+        android:id="@+id/rl_act_start"
+        android:layout_width="match_parent"
+        android:layout_height="50dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dip"
+            android:text="活动开始日期"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tv_act_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dip"
+            android:drawableRight="@mipmap/fragment_my_arrow"
+            android:gravity="center"
+            android:text="活动开始日期"
+            android:textColor="@color/color_505050"
+            android:textSize="13sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_f0f0f0" />
+    <RelativeLayout
+        android:id="@+id/rl_act_end"
+        android:layout_width="match_parent"
+        android:layout_height="50dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dip"
+            android:text="活动结束日期"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tv_act_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dip"
+            android:drawableRight="@mipmap/fragment_my_arrow"
+            android:gravity="center"
+            android:text="未选择"
+            android:textColor="@color/color_505050"
+            android:textSize="13sp" />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_f0f0f0" />
+
+    <RelativeLayout
+        android:id="@+id/rl_act_apply_end"
+        android:layout_width="match_parent"
+        android:layout_height="50dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dip"
+            android:text="报名截止日期"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tv_act_apply_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dip"
+            android:drawableRight="@mipmap/fragment_my_arrow"
+            android:gravity="center"
+            android:text="未选择"
+            android:textColor="@color/color_505050"
+            android:textSize="13sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

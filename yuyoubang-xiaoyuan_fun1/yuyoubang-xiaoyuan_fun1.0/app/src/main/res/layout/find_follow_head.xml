@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:recyclelistview="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_505050"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/find_listview_header_image"
+                android:text="推荐"
+                android:gravity="center"
+                android:drawablePadding="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_alignParentLeft="true"/>
+
+
+            <TextView
+                android:id="@+id/more_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多 >"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dip"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+
+        <!--<include layout="@layout/h_line"/>-->
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/color_f0f0f0" />
+
+
+        <com.yuyoubang.widget.recycleview.RecyclerListView
+            android:id="@+id/more_follow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            recyclelistview:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+        </com.yuyoubang.widget.recycleview.RecyclerListView>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="5dip"
+            android:background="@color/color_f0f0f0" />
+
+    </LinearLayout>
+
+</LinearLayout>

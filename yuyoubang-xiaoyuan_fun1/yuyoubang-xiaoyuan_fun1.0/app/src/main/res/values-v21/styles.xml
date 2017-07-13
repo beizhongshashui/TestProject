@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="ZhikeAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+                <!--ActionBar背景  -->
+                <item name="colorPrimary">@color/color_ffffff</item>
+                <item name="colorPrimaryDark">@color/color_ff9600</item>
+                <item name="colorAccent">@color/color_ff9600</item>
+                <!--页面背景-->
+                <item name="android:windowBackground">@color/color_f7f7f7</item>
+
+
+        </style>
+</resources>
